@@ -10,6 +10,7 @@ import HomePage from './pages/HomePage'
 
 // Auth
 import LoginPage from './pages/auth/LoginPage'
+import LoginCompletePage from './pages/auth/LoginCompletePage'
 import SignupPage from './pages/auth/SignupPage'
 import MyPage from './pages/auth/MyPage'
 
@@ -51,6 +52,7 @@ export default function App() {
           {/* Public */}
           <Route path="/" element={<Layout><HomePage /></Layout>} />
           <Route path="/login" element={<Layout><LoginPage /></Layout>} />
+          <Route path="/login/complete" element={<Layout><ProtectedRoute><LoginCompletePage /></ProtectedRoute></Layout>} />
           <Route path="/signup" element={<Layout><SignupPage /></Layout>} />
 
           {/* Company */}

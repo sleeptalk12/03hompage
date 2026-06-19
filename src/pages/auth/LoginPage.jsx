@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
-import { Link, useNavigate, useLocation } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../../contexts/AuthContext'
 
 const schema = z.object({
@@ -12,8 +12,6 @@ const schema = z.object({
 export default function LoginPage() {
   const { signIn } = useAuth()
   const navigate = useNavigate()
-  const location = useLocation()
-  const from = location.state?.from?.pathname || '/'
 
   const { register, handleSubmit, formState: { errors, isSubmitting }, setError } = useForm({
     resolver: zodResolver(schema),
@@ -22,7 +20,7 @@ export default function LoginPage() {
   async function onSubmit(data) {
     try {
       await signIn(data)
-      navigate(from, { replace: true })
+      navigate('/login/complete', { replace: true })
     } catch (err) {
       setError('root', { message: err.message || '로그인에 실패했습니다.' })
     }
