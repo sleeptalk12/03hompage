@@ -4,7 +4,8 @@
       "Bash(npm install *)",
       "mcp__supabase__apply_migration",
       "Bash(npm run *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(curl -s https://26-mycom-phi.vercel.app/)"
     ]
   }
 }
