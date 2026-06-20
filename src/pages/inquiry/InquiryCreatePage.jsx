@@ -21,8 +21,7 @@ export default function InquiryCreatePage() {
 
   async function onSubmit(data) {
     await createInquiry({ ...data, user_id: user.id })
-    alert('문의가 등록되었습니다.')
-    navigate('/inquiry/list', { replace: true })
+    navigate('/inquiry/complete', { replace: true })
   }
 
   return (

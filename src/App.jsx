@@ -34,6 +34,7 @@ import PostEditPage from './pages/posts/PostEditPage'
 
 // Inquiry
 import InquiryCreatePage from './pages/inquiry/InquiryCreatePage'
+import InquiryCompletePage from './pages/inquiry/InquiryCompletePage'
 import InquiryListPage from './pages/inquiry/InquiryListPage'
 
 // Admin
@@ -76,6 +77,7 @@ export default function App() {
 
           {/* Inquiry */}
           <Route path="/inquiry" element={<Layout><ProtectedRoute><InquiryCreatePage /></ProtectedRoute></Layout>} />
+          <Route path="/inquiry/complete" element={<Layout><ProtectedRoute><InquiryCompletePage /></ProtectedRoute></Layout>} />
           <Route path="/inquiry/list" element={<Layout><ProtectedRoute><InquiryListPage /></ProtectedRoute></Layout>} />
 
           {/* MyPage */}
