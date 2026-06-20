@@ -12,6 +12,7 @@ import HomePage from './pages/HomePage'
 import LoginPage from './pages/auth/LoginPage'
 import LoginCompletePage from './pages/auth/LoginCompletePage'
 import SignupPage from './pages/auth/SignupPage'
+import SignupCompletePage from './pages/auth/SignupCompletePage'
 import MyPage from './pages/auth/MyPage'
 
 // Company
@@ -54,6 +55,7 @@ export default function App() {
           <Route path="/login" element={<Layout><LoginPage /></Layout>} />
           <Route path="/login/complete" element={<Layout><ProtectedRoute><LoginCompletePage /></ProtectedRoute></Layout>} />
           <Route path="/signup" element={<Layout><SignupPage /></Layout>} />
+          <Route path="/signup/complete" element={<Layout><SignupCompletePage /></Layout>} />
 
           {/* Company */}
           <Route path="/company/about" element={<Layout><CompanyAbout /></Layout>} />

@@ -25,7 +25,7 @@ export default function SignupPage() {
   async function onSubmit({ name, email, password }) {
     try {
       await signUp({ name, email, password })
-      navigate('/', { replace: true })
+      navigate('/signup/complete', { replace: true })
     } catch (err) {
       setError('root', { message: err.message || '회원가입에 실패했습니다.' })
     }
